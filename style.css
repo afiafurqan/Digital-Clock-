@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #0f172a;
+}
+
+.clock {
+  width: 100%;
+  max-width: 640px;
+  padding: 40px 20px;
+  text-align: center;
+  background: #1e293b;
+  border: 2px solid #38bdf8;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.35);
+}
+
+.time {
+  font-family: "Courier New", monospace;
+  font-size: clamp(2rem, 11vw, 4.5rem);
+  font-weight: 700;
+  color: #38bdf8;
+  text-shadow: 0 0 12px rgba(56, 189, 248, 0.7);
+  white-space: nowrap;
+}
+
+.colon {
+  animation: blink 1s steps(1) infinite;
+}
+
+.ampm {
+  margin-left: 6px;
+  font-size: 0.35em;
+  color: #7dd3fc;
+}
+
+.date {
+  margin: 16px 0 24px;
+  font-size: clamp(1rem, 4vw, 1.4rem);
+  color: #cbd5e1;
+}
+
+.format {
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f172a;
+  background: #38bdf8;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.format:hover {
+  background: #7dd3fc;
+}
+
+.format:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.25;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .colon {
+    animation: none;
+  }
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Digital Clock</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="clock">
+    <div class="time" role="timer" aria-label="Current time">
+      <span id="hours">00</span><span class="colon">:</span><span id="minutes">00</span><span class="colon">:</span><span id="seconds">00</span>
+      <span id="ampm" class="ampm">AM</span>
+    </div>
+    <p id="date" class="date"></p>
+    <button id="format" class="format">Switch to 24-hour</button>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
